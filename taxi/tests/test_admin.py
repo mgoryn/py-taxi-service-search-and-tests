@@ -39,7 +39,7 @@ class AdminSiteTests(TestCase):
 
     def test_driver_admin_add_fieldsets(self):
         """
-        Test that license_number, first_name, and last_name are on the admin page.
+        Test license_number, first_name, and last_name are on the admin page.
         """
         url = reverse("admin:taxi_driver_change", args=[self.driver.id])
         res = self.client.get(url)
