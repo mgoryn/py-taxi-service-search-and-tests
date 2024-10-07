@@ -8,20 +8,7 @@
       Create
     </a>
   
-    <input type="checkbox" id="search-toggle" style="display:none;"
-        {% if request.GET.model %}
-           checked
-        {% endif %}>
-    <label for="search-toggle" class="btn btn-outline-primary">🔎</label>
-      
-    <div class="search-container">
-      <form method="GET" action="" class="form-inline mb-3">
-        {{ search_form|crispy }}
-        <button type="submit" class="btn btn-outline-primary mt-2">
-          Search
-        </button>
-      </form>
-    </div>
+    {% include "includes/search.html" %}
   </h1>
   
   {% if manufacturer_list %}
